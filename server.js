@@ -1,13 +1,8 @@
-import express from "express";
 import dotenv from "dotenv";
 
+import app from "./src/app.js";
+
 dotenv.config();
-
-const app = express();
-
-app.get("/", (req, res) => {
-    res.send("Hello")
-});
 
 const PORT = process.env.PORT || 3000;
 
