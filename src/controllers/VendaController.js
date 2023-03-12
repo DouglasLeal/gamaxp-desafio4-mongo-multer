@@ -5,7 +5,7 @@ import ProdutoRepository from "../repositories/ProdutoRepository.js";
 class VendaController{
     static async listar(req, res){
         try {
-            let vendas = await VendaRepository.listar();
+            let vendas = await VendaRepository.listar(req.AUTH.id);
 
             return res.status(200).json(vendas);
         } catch (error) {
